@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ma Sói — Trang 2: Bốc bài</title>
+  <link rel="stylesheet" href="./trang-2.css" />
+</head>
+<body>
+  <div class="wrap" role="application" aria-label="Ma Sói — Trang 2">
+    <div class="head">
+      <div>
+        <div class="title">Ma Sói — Trang 2: Bốc 1 lá</div>
+        <div class="subtitle">Bốc ngẫu nhiên 1 lá từ cấu hình Trang 1. Mỗi lần bấm sẽ trừ 1 lá.</div>
+      </div>
+      <div class="subtitle" id="totalLeft">Còn lại: 0</div>
+    </div>
+
+    <div class="toolbar">
+      <button class="btn" id="backBtn">← Trang 1</button>
+      <button class="btn" id="hideBtn" disabled>Ẩn lá vừa bốc</button>
+      <button class="btn primary" id="drawBtn">Chọn (bốc 1 lá)</button>
+    </div>
+
+    <div class="board">
+      <div id="currentCard" class="card placeholder" aria-live="polite">
+        <div class="emoji">🂠</div>
+        <div class="label">Chưa bốc</div>
+        <div class="sub">Bấm “Chọn (bốc 1 lá)” để bắt đầu</div>
+      </div>
+
+      <div class="leftbox">
+        <div class="left-title">Số lượng còn lại</div>
+        <ul class="left-list" id="leftList"></ul>
+      </div>
+    </div>
+
+    <div class="note">
+      Luồng: Bốc 1 lá → xem → bấm “Ẩn lá vừa bốc” → bốc tiếp. Khi hết bài, chỉ còn Ẩn lá cuối.
+    </div>
+  </div>
+
+  <script src="./trang-2.js" defer></script>
+</body>
+</html>

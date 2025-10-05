@@ -1,1 +1,99 @@
-đasa
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ma Sói — Trang 1: Nhập cấu hình</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="wrap" role="application" aria-label="Ma Sói — Trang 1 cấu hình">
+    <div class="head">
+      <div>
+        <div class="title">Ma Sói — Trang 1: Nhập cấu hình vai trò</div>
+      </div>
+      <div class="subtitle" id="status">Chưa hợp lệ</div>
+    </div>
+
+    <form id="form" novalidate>
+      <!-- 14 vai trò -->
+      <div class="field"><label for="soitrum">Sói trùm</label>
+        <input id="soitrum" type="number" min="0" step="1" placeholder="0" inputmode="numeric" />
+      </div>
+
+      <div class="field"><label for="soi">Sói</label>
+        <input id="soi" type="number" min="0" step="1" placeholder="0" inputmode="numeric" />
+      </div>
+
+      <div class="field"><label for="dan">Dân</label>
+        <input id="dan" type="number" min="0" step="1" placeholder="0" inputmode="numeric" />
+      </div>
+
+      <div class="field"><label for="soinguoi">Sói người</label>
+        <input id="soinguoi" type="number" min="0" step="1" placeholder="0" inputmode="numeric" />
+      </div>
+
+      <div class="field"><label for="soicon">Sói con</label>
+        <input id="soicon" type="number" min="0" step="1" placeholder="0" inputmode="numeric" />
+      </div>
+
+      <div class="field"><label for="baove">Bảo vệ</label>
+        <input id="baove" type="number" min="0" step="1" placeholder="0" inputmode="numeric" />
+      </div>
+
+      <div class="field"><label for="tietlo">Tiết lộ</label>
+        <input id="tietlo" type="number" min="0" step="1" placeholder="0" inputmode="numeric" />
+      </div>
+
+      <div class="field"><label for="phuthuy">Phù thủy</label>
+        <input id="phuthuy" type="number" min="0" step="1" placeholder="0" inputmode="numeric" />
+      </div>
+
+      <div class="field"><label for="hoangtu">Hoàng tử</label>
+        <input id="hoangtu" type="number" min="0" step="1" placeholder="0" inputmode="numeric" />
+      </div>
+
+      <div class="field"><label for="cungcoi">Cứng cỏi</label>
+        <input id="cungcoi" type="number" min="0" step="1" placeholder="0" inputmode="numeric" />
+      </div>
+
+      <div class="field"><label for="tientri">Tiên tri</label>
+        <input id="tientri" type="number" min="0" step="1" placeholder="0" inputmode="numeric" />
+      </div>
+
+      <div class="field"><label for="tamlinh">Tâm linh</label>
+        <input id="tamlinh" type="number" min="0" step="1" placeholder="0" inputmode="numeric" />
+      </div>
+
+      <div class="field"><label for="tusi">Tu sĩ</label>
+        <input id="tusi" type="number" min="0" step="1" placeholder="0" inputmode="numeric" />
+      </div>
+
+      <div class="field"><label for="phanboi">Phản bội</label>
+        <input id="phanboi" type="number" min="0" step="1" placeholder="0" inputmode="numeric" />
+      </div>
+
+      <div class="meta">
+        <div id="totalBox" class="total">Tổng người chơi: 0</div>
+        <div id="validationMsg" class="bad">Vui lòng nhập số nguyên ≥ 0 (tổng > 0).</div>
+      </div>
+
+      <div class="actions">
+        <button type="button" class="btn" id="reset">Xoá hết</button>
+        <button type="submit" class="btn primary" id="enterBtn" disabled>Enter</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- LỊCH SỬ BỐC BÀI -->
+  <div id="historyBox" class="history" hidden>
+    <div class="history-head">
+      <div class="title">Lịch sử bốc bài (lần gần nhất)</div>
+      <button type="button" class="btn" id="clearHistoryBtn">Xoá lịch sử</button>
+    </div>
+    <ol id="historyList" class="history-list"></ol>
+  </div>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
